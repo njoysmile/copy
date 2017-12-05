@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <TableLayout
+        android:id="@+id/input_Write"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:id="@+id/Date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="날짜"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteY="81dp" />
+
+            <TextView
+                android:id="@+id/Date_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:hint="날짜를 입력하세요"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Method"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/text수입분류"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="분류"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteY="81dp" />
+
+            <TextView
+                android:id="@+id/Method_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:hint="현금 / 카드 / 이체"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Sum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textSum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="금액"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteY="81dp" />
+
+            <TextView
+                android:id="@+id/Sum_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:digits="012345678901234"
+                android:hint="금액을 입력하세요"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textSize="18sp"
+                android:visibility="visible" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="물품"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteY="81dp" />
+
+            <TextView
+                android:id="@+id/Product_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:hint="장소를 입력하세요"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/Content"
+        android:layout_width="360dp"
+        android:layout_height="84dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_Write">
+
+        <TextView
+            android:id="@+id/Content_output"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="내용을 입력하세요"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/EntryImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Content" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/addImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="이미지 추가" />
+
+        <Button
+            android:id="@+id/ModifyEntry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="수정" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

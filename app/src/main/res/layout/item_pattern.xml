@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cookie.Pattern">
+
+    <LinearLayout
+        android:id="@+id/내용"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/상단고정">
+
+        <LinearLayout
+            android:id="@+id/pat_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/pat_date_output"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:ems="10"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="년 월 일"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pat_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pat_date">
+
+            <TextView
+                android:id="@+id/pat_method_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="결제종류"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="37dp" />
+
+            <TextView
+                android:id="@+id/pat_content_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.7"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="사용내용"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/pat_sum1_output"
+                tools:layout_editor_absoluteX="76dp" />
+
+            <TextView
+                android:id="@+id/pat_sum1_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="0"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/pat_sum2_output"
+                tools:layout_editor_absoluteY="37dp" />
+
+            <TextView
+                android:id="@+id/공백4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6" />
+
+            <TextView
+                android:id="@+id/pat_sum2_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="313dp"
+                tools:layout_editor_absoluteY="37dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
